@@ -10,7 +10,8 @@ This project is a iOS application.
 There are clinics around K-W region. Each clinic has doctors, have their seperate calendars. Patient chooses clinic's location from map view and sets appointment date that is available
 
 ## User Interface
-- 3 screens 
-First Screen -> Patient Information
-Second Screen ->Choose clinic's location from mapview
-Third Screen -> Select date and time and confirm the appointment.
+- There are 3 screens 
+
+-First Screen -> Patient Information
+-Second Screen ->Choose clinic's location from mapview
+-Third Screen -> Select date and time and confirm the appointment.
