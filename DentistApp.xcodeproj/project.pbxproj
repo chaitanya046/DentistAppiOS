@@ -12,9 +12,9 @@
 		47E5DD462491EA6500C8197B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD452491EA6500C8197B /* ViewController.swift */; };
 		47E5DD492491EA6500C8197B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E5DD472491EA6500C8197B /* Main.storyboard */; };
 		47E5DD4B2491EA6700C8197B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E5DD4A2491EA6700C8197B /* Assets.xcassets */; };
-		47E5DD4E2491EA6700C8197B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47E5DD4C2491EA6700C8197B /* LaunchScreen.storyboard */; };
 		47E5DD592491EA6800C8197B /* DentistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD582491EA6800C8197B /* DentistAppTests.swift */; };
 		47E5DD642491EA6800C8197B /* DentistAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD632491EA6800C8197B /* DentistAppUITests.swift */; };
+		A12F3DFA24944B8C0087F194 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12F3DF924944B8C0087F194 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 		47E5DD452491EA6500C8197B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47E5DD482491EA6500C8197B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47E5DD4A2491EA6700C8197B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		47E5DD4D2491EA6700C8197B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47E5DD4F2491EA6700C8197B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E5DD542491EA6800C8197B /* DentistAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DentistAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD582491EA6800C8197B /* DentistAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistAppTests.swift; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		47E5DD5F2491EA6800C8197B /* DentistAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DentistAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD632491EA6800C8197B /* DentistAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistAppUITests.swift; sourceTree = "<group>"; };
 		47E5DD652491EA6800C8197B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A12F3DF924944B8C0087F194 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12F3DFA24944B8C0087F194 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +84,7 @@
 				47E5DD572491EA6800C8197B /* DentistAppTests */,
 				47E5DD622491EA6800C8197B /* DentistAppUITests */,
 				47E5DD3F2491EA6500C8197B /* Products */,
+				A12F3DF824944B8B0087F194 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,7 +106,6 @@
 				47E5DD452491EA6500C8197B /* ViewController.swift */,
 				47E5DD472491EA6500C8197B /* Main.storyboard */,
 				47E5DD4A2491EA6700C8197B /* Assets.xcassets */,
-				47E5DD4C2491EA6700C8197B /* LaunchScreen.storyboard */,
 				47E5DD4F2491EA6700C8197B /* Info.plist */,
 			);
 			path = DentistApp;
@@ -126,6 +127,14 @@
 				47E5DD652491EA6800C8197B /* Info.plist */,
 			);
 			path = DentistAppUITests;
+			sourceTree = "<group>";
+		};
+		A12F3DF824944B8B0087F194 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A12F3DF924944B8C0087F194 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +241,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E5DD4E2491EA6700C8197B /* LaunchScreen.storyboard in Resources */,
 				47E5DD4B2491EA6700C8197B /* Assets.xcassets in Resources */,
 				47E5DD492491EA6500C8197B /* Main.storyboard in Resources */,
 			);
@@ -303,14 +311,6 @@
 				47E5DD482491EA6500C8197B /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		47E5DD4C2491EA6700C8197B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47E5DD4D2491EA6700C8197B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
