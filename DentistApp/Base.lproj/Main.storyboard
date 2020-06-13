@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Find Dentistry" id="Ozp-UJ-vme"/>
+                    <tabBarItem key="tabBarItem" title="Find Dentistry" image="globe" catalog="system" id="Ozp-UJ-vme"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX0-Ji-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iaK-i4-aSN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Confirmation Page" id="wlu-9g-rqw"/>
+                    <tabBarItem key="tabBarItem" title="Confirmation Page" image="control" catalog="system" id="wlu-9g-rqw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="368-k2-U0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,7 +135,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qg0-1G-Z6E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Patient's Info " id="qDe-JH-tsF"/>
+                    <tabBarItem key="tabBarItem" title="Patient's Info " image="pencil" catalog="system" id="qDe-JH-tsF"/>
                     <navigationItem key="navigationItem" id="3WF-B2-6EE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -165,5 +165,8 @@
     </scenes>
     <resources>
         <image name="Logo_Final_Approved" width="800" height="400"/>
+        <image name="control" catalog="system" width="128" height="72"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
     </resources>
 </document>
