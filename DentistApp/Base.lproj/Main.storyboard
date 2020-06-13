@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -35,20 +35,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0y4-Fi-YT7">
-                                <rect key="frame" x="172" y="678" width="70" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Confirm"/>
-                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-aX-QEs">
+                                <rect key="frame" x="47" y="133" width="320" height="196"/>
+                                <connections>
+                                    <action selector="dateTimePicker:" destination="k27-fb-ImA" eventType="valueChanged" id="hCB-B6-yW1"/>
+                                </connections>
+                            </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo_Final_Approved" translatesAutoresizingMaskIntoConstraints="NO" id="I5J-vw-hLH">
-                                <rect key="frame" x="47" y="312" width="320" height="268"/>
+                                <rect key="frame" x="47" y="384" width="320" height="185"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="268.00000000000017" id="TiI-4Y-F41"/>
                                 </constraints>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-aX-QEs">
-                                <rect key="frame" x="47" y="111" width="320" height="216"/>
-                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ja1-5e-JWR">
+                                <rect key="frame" x="179" y="623" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="confirm"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -57,17 +60,20 @@
                             <constraint firstItem="bpd-aX-QEs" firstAttribute="centerX" secondItem="3dP-NN-ggK" secondAttribute="centerX" id="M4x-FA-AoO"/>
                             <constraint firstItem="I5J-vw-hLH" firstAttribute="top" secondItem="bpd-aX-QEs" secondAttribute="bottom" constant="8" id="RjU-Z6-8pr"/>
                             <constraint firstItem="Y3i-wQ-xsJ" firstAttribute="centerX" secondItem="3dP-NN-ggK" secondAttribute="centerX" id="Ugd-fg-NmY"/>
+                            <constraint firstItem="I5J-vw-hLH" firstAttribute="top" secondItem="Y3i-wQ-xsJ" secondAttribute="bottom" constant="234" id="ZLr-hC-kkz"/>
                             <constraint firstItem="bpd-aX-QEs" firstAttribute="centerX" secondItem="3dP-NN-ggK" secondAttribute="centerX" id="d0I-9N-m53"/>
-                            <constraint firstItem="0y4-Fi-YT7" firstAttribute="top" secondItem="I5J-vw-hLH" secondAttribute="bottom" constant="53.004662004648026" id="hnW-MJ-YTY"/>
+                            <constraint firstItem="iaK-i4-aSN" firstAttribute="trailing" secondItem="I5J-vw-hLH" secondAttribute="trailing" constant="47" id="iSt-Zf-0wO"/>
                             <constraint firstItem="Y3i-wQ-xsJ" firstAttribute="top" secondItem="iaK-i4-aSN" secondAttribute="top" constant="30" id="iz2-JY-KK2"/>
+                            <constraint firstItem="I5J-vw-hLH" firstAttribute="leading" secondItem="iaK-i4-aSN" secondAttribute="leading" constant="47" id="kF6-C3-e0f"/>
                             <constraint firstItem="bpd-aX-QEs" firstAttribute="top" secondItem="Y3i-wQ-xsJ" secondAttribute="bottom" constant="30" id="xeu-Dn-oau"/>
-                            <constraint firstItem="0y4-Fi-YT7" firstAttribute="centerX" secondItem="3dP-NN-ggK" secondAttribute="centerX" id="yoH-9P-rUE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iaK-i4-aSN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Confirmation Page" id="wlu-9g-rqw"/>
+                    <tabBarItem key="tabBarItem" title="Confirmation Page" id="VBP-dl-pv1"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="368-k2-U0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="k27-fb-ImA" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-6213.04347826087" y="-41.517857142857139"/>
         </scene>
@@ -107,7 +113,16 @@
                                 <rect key="frame" x="128" y="284" width="158.5" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="btnSave:" destination="W4h-H0-S0L" eventType="touchUpInside" id="OMW-4Y-vZd"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on save " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-gZ-hTI">
+                                <rect key="frame" x="158" y="394" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -121,10 +136,17 @@
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Ktm-JH-Tvq"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="OlC-Bz-VMD"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="On5-4U-AsP"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="trailing" secondItem="E5A-gZ-hTI" secondAttribute="trailing" constant="57" id="Pik-Hg-VcK"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="E5A-gZ-hTI" secondAttribute="bottom" constant="398" id="SBc-I1-HF4"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="E5A-gZ-hTI" secondAttribute="bottom" constant="398" id="UdK-mF-tND"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="YxB-0R-GDl"/>
+                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="top" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="70" id="alT-vf-efn"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="bcw-LS-EoH"/>
+                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="leading" secondItem="qg0-1G-Z6E" secondAttribute="leading" constant="128" id="cZc-Sq-HSq"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="trailing" secondItem="E5A-gZ-hTI" secondAttribute="trailing" constant="151" id="cgC-rl-8bc"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="e4k-PH-d9d"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="f33-Zr-dBB"/>
+                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="leading" secondItem="qg0-1G-Z6E" secondAttribute="leading" constant="158" id="fVB-Hh-zIX"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="g1s-dK-BxC"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="top" secondItem="BtB-TL-GR2" secondAttribute="bottom" constant="30" id="hpV-gv-Sqm"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="liL-IW-kat"/>
@@ -132,15 +154,19 @@
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="nAm-iJ-Xa7"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="rM7-mU-cVd"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="xCm-6u-FfW"/>
+                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="top" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="70" id="yjk-Of-cIw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qg0-1G-Z6E"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Patient's Info " id="qDe-JH-tsF"/>
                     <navigationItem key="navigationItem" id="3WF-B2-6EE"/>
+                    <connections>
+                        <outlet property="saveLabel" destination="E5A-gZ-hTI" id="ky1-0V-4DA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7018" y="-744"/>
+            <point key="canvasLocation" x="-7018.8405797101459" y="-744.64285714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cUf-ws-faM">
