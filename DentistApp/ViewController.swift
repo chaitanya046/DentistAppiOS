@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     
     func dismissKey()
 {
+    //this fnction enables the user to dismiss the keyboard by tapping on the screen anywhere
     let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self.view, action: #selector(UIView.endEditing))
     tap.cancelsTouchesInView = false; view.addGestureRecognizer(tap)
 }
