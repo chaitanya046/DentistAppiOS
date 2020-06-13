@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -161,6 +161,9 @@
                     <tabBarItem key="tabBarItem" title="Patient's Info " image="pencil" catalog="system" id="qDe-JH-tsF"/>
                     <navigationItem key="navigationItem" id="3WF-B2-6EE"/>
                     <connections>
+                        <outlet property="ageEntered" destination="b6f-k2-PKD" id="pVC-HL-DDd"/>
+                        <outlet property="nameEntered" destination="BtB-TL-GR2" id="Ee1-FY-MBi"/>
+                        <outlet property="phoneEntered" destination="g2a-Jg-mqU" id="Kc8-m2-8pu"/>
                         <outlet property="saveLabel" destination="E5A-gZ-hTI" id="ky1-0V-4DA"/>
                     </connections>
                 </viewController>
@@ -191,7 +194,6 @@
     </scenes>
     <resources>
         <image name="Logo_Final_Approved" width="800" height="400"/>
-        <image name="control" catalog="system" width="128" height="72"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
     </resources>
