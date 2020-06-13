@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func btnSave(_ sender: UIButton)
     {
+		//getting text values from the textfield and assigning them to the variables which we are using in the alert dialog box
         let name: String = nameEntered.text!
         let age: String = ageEntered.text!
         let phone: String = phoneEntered.text!
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func btnConfirm(_ sender: Any) {
+		//getting date from the datepicker and assigning it to the variable which we will use in the alert dialog box
         let inputDate =  datepicker.date
         let formatter = DateFormatter()
         let myString = formatter.string(from: inputDate)
