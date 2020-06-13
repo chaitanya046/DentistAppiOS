@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Ozp-UJ-vme"/>
+                    <tabBarItem key="tabBarItem" title="Find Dentistry" id="Ozp-UJ-vme"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX0-Ji-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,9 +29,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-aX-QEs">
-                                <rect key="frame" x="47" y="133" width="320" height="216"/>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Date &amp; Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3i-wQ-xsJ">
                                 <rect key="frame" x="100.5" y="74" width="213.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -49,6 +46,9 @@
                                     <constraint firstAttribute="height" constant="268.00000000000017" id="TiI-4Y-F41"/>
                                 </constraints>
                             </imageView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bpd-aX-QEs">
+                                <rect key="frame" x="47" y="111" width="320" height="216"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -65,7 +65,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iaK-i4-aSN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wlu-9g-rqw"/>
+                    <tabBarItem key="tabBarItem" title="Confirmation Page" id="wlu-9g-rqw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="368-k2-U0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,10 +94,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="enterPhoneNumber:" destination="92J-Uh-hX5" eventType="editingDidEnd" id="8jN-k5-RSX"/>
-                                    <action selector="enterPhoneNumber:forEvent:" destination="92J-Uh-hX5" eventType="editingDidEnd" id="ini-m6-k4U"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-k2-PKD">
                                 <rect key="frame" x="128" y="214" width="158.5" height="40"/>
@@ -139,11 +135,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qg0-1G-Z6E"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qDe-JH-tsF"/>
+                    <tabBarItem key="tabBarItem" title="Patient's Info " id="qDe-JH-tsF"/>
                     <navigationItem key="navigationItem" id="3WF-B2-6EE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="92J-Uh-hX5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-7018" y="-744"/>
         </scene>
@@ -153,6 +148,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SRy-nz-eMc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S1x-d4-qtv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
