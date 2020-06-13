@@ -11,15 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
    
-  
-
-    @IBOutlet weak var btnClick: UIButton!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-              btnClick.addTarget(self,action: #selector(tapOnButton), for: .touchUpInside)    }
-    
-    
-
+    @IBOutlet weak var saveLabel: UILabel!
+    @IBAction func btnSave(_ sender: UIButton)
+    {
+        saveLabel.text = "Information saved!!"
+    }
     
     @objc func tapOnButton(){
         let story = UIStoryboard(name: "Main", bundle: nil)
