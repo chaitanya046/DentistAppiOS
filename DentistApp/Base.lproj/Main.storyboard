@@ -74,7 +74,7 @@
         <!--Patient Information-->
         <scene sceneID="317-Bx-LfO">
             <objects>
-                <viewController title="Patient Information" id="W4h-H0-S0L" sceneMemberID="viewController">
+                <viewController title="Patient Information" id="W4h-H0-S0L" customClass="ViewController" customModule="DentistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Na-RX-uIW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,10 +94,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="enterPhoneNumber:" destination="92J-Uh-hX5" eventType="editingDidEnd" id="8jN-k5-RSX"/>
-                                    <action selector="enterPhoneNumber:forEvent:" destination="92J-Uh-hX5" eventType="editingDidEnd" id="ini-m6-k4U"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-k2-PKD">
                                 <rect key="frame" x="128" y="214" width="158.5" height="40"/>
@@ -143,7 +139,6 @@
                     <navigationItem key="navigationItem" id="3WF-B2-6EE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="92J-Uh-hX5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-7018" y="-744"/>
         </scene>
@@ -153,6 +148,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SRy-nz-eMc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S1x-d4-qtv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
