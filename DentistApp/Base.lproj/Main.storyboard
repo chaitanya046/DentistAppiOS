@@ -24,7 +24,7 @@
         <!--Confirmation Screeen-->
         <scene sceneID="zcd-u6-NoE">
             <objects>
-                <viewController title="Confirmation Screeen" id="sZH-eX-zVM" sceneMemberID="viewController">
+                <viewController title="Confirmation Screeen" id="sZH-eX-zVM" customClass="ViewController" customModule="DentistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3dP-NN-ggK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,6 +51,9 @@
                                 <rect key="frame" x="179" y="623" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="confirm"/>
+                                <connections>
+                                    <action selector="btnConfirm:" destination="sZH-eX-zVM" eventType="touchUpInside" id="eRx-0t-zyc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -71,6 +74,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Confirmation Page" id="VBP-dl-pv1"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="datepicker" destination="bpd-aX-QEs" id="Sdn-eW-VUw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="368-k2-U0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="k27-fb-ImA" userLabel="Exit" sceneMemberID="exit"/>
