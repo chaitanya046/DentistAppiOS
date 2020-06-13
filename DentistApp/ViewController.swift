@@ -33,12 +33,14 @@ class ViewController: UIViewController {
             let alert = UIAlertController(title: "Information Not saved ", message: "Please fill all the input fields", preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            dismissKey()
         }
         else{
             //informaion is valid and filled correctly
              let alert = UIAlertController(title: "Information Saved", message: "Dear, "+name+" Aged: "+age+" you will be soon sent details on: "+phone, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            dismissKey()
         }
     }
     var myDateString = "Date"
@@ -58,9 +60,14 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: "Apointment Confirmed", message: "Your appointment is confirmed "+myDateString, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
                self.present(alert, animated: true, completion: nil)
-        
-        
+        dismissKey()
     }
+    
+    func dismissKey()
+{
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self.view, action: #selector(UIView.endEditing))
+    tap.cancelsTouchesInView = false; view.addGestureRecognizer(tap)
+}
     
     
 }
