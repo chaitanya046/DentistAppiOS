@@ -16,9 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var phoneEntered: UITextField!
     
     @IBOutlet weak var ageEntered: UITextField!
-    
-    @IBOutlet weak var saveLabel: UILabel!
-    
+        
     @IBOutlet weak var datepicker: UIDatePicker!
     
     //executes when save button is pressed
@@ -44,18 +42,25 @@ class ViewController: UIViewController {
         }
     }
     var myDateString = "Date"
+    let today = Date()
+    let dateFormatter = DateFormatter()
+   
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         //getting date from the datepicker and assigning it to the variable which we will use in the alert dialog box
-          let dateFormatter = DateFormatter()
-
-    dateFormatter.dateStyle = DateFormatter.Style.short
-    dateFormatter.timeStyle = DateFormatter.Style.short
-
-     myDateString = dateFormatter.string(from: datepicker.date)
+   
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        myDateString = dateFormatter.string(from: datepicker.date)
        
     }
     //executes when confirm button is pressed
     @IBAction func btnConfirm(_ sender: Any) {
+        
+        //if datepicker is not changed this means today's date and time is selected
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        myDateString = dateFormatter.string(from: today)
+        
         //creates and displays the alert
         let alert = UIAlertController(title: "Apointment Confirmed", message: "Your appointment is confirmed "+myDateString, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))

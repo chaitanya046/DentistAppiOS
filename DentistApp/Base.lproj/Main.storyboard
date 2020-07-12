@@ -121,12 +121,6 @@
                                     <action selector="btnSave:" destination="W4h-H0-S0L" eventType="touchUpInside" id="OMW-4Y-vZd"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on save " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-gZ-hTI">
-                                <rect key="frame" x="128" y="394" width="105" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -138,10 +132,9 @@
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Ktm-JH-Tvq"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="OlC-Bz-VMD"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="On5-4U-AsP"/>
-                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="E5A-gZ-hTI" secondAttribute="bottom" constant="398" id="SBc-I1-HF4"/>
-                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="top" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="70" id="alT-vf-efn"/>
+                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="YxB-0R-GDl"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="bcw-LS-EoH"/>
-                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="leading" secondItem="qg0-1G-Z6E" secondAttribute="leading" constant="128" id="cZc-Sq-HSq"/>
+                            <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="e4k-PH-d9d"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="f33-Zr-dBB"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="liL-IW-kat"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="nAm-iJ-Xa7"/>
@@ -155,7 +148,6 @@
                         <outlet property="ageEntered" destination="b6f-k2-PKD" id="pVC-HL-DDd"/>
                         <outlet property="nameEntered" destination="BtB-TL-GR2" id="Ee1-FY-MBi"/>
                         <outlet property="phoneEntered" destination="g2a-Jg-mqU" id="Kc8-m2-8pu"/>
-                        <outlet property="saveLabel" destination="E5A-gZ-hTI" id="ky1-0V-4DA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
