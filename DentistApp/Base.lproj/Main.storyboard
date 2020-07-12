@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -114,7 +114,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT6-3I-BkU">
-                                <rect key="frame" x="128" y="284" width="158.5" height="40"/>
+                                <rect key="frame" x="185.5" y="284" width="43" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
@@ -122,7 +122,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click on save " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-gZ-hTI">
-                                <rect key="frame" x="128" y="394" width="135" height="21"/>
+                                <rect key="frame" x="128" y="394" width="105" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -133,30 +133,19 @@
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="3rg-sh-Ubz"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="4xo-dD-xDT"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="66J-iL-nmf"/>
-                            <constraint firstItem="vT6-3I-BkU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="6FL-zB-bJP"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="7gm-xw-SUo"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="top" secondItem="b6f-k2-PKD" secondAttribute="bottom" constant="30" id="CMg-jB-IUj"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Db2-tg-9Pa"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Ktm-JH-Tvq"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="OlC-Bz-VMD"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="On5-4U-AsP"/>
                             <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="E5A-gZ-hTI" secondAttribute="bottom" constant="398" id="SBc-I1-HF4"/>
-                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="E5A-gZ-hTI" secondAttribute="bottom" constant="398" id="UdK-mF-tND"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="YxB-0R-GDl"/>
                             <constraint firstItem="E5A-gZ-hTI" firstAttribute="top" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="70" id="alT-vf-efn"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="bcw-LS-EoH"/>
                             <constraint firstItem="E5A-gZ-hTI" firstAttribute="leading" secondItem="qg0-1G-Z6E" secondAttribute="leading" constant="128" id="cZc-Sq-HSq"/>
-                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="trailing" secondItem="E5A-gZ-hTI" secondAttribute="trailing" constant="151" id="cgC-rl-8bc"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="e4k-PH-d9d"/>
                             <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="f33-Zr-dBB"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="g1s-dK-BxC"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="top" secondItem="BtB-TL-GR2" secondAttribute="bottom" constant="30" id="hpV-gv-Sqm"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="liL-IW-kat"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="top" secondItem="BtB-TL-GR2" secondAttribute="bottom" constant="30" id="mOA-5b-Q40"/>
                             <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="nAm-iJ-Xa7"/>
-                            <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="rM7-mU-cVd"/>
                             <constraint firstItem="BtB-TL-GR2" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="xCm-6u-FfW"/>
-                            <constraint firstItem="E5A-gZ-hTI" firstAttribute="top" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="70" id="yjk-Of-cIw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qg0-1G-Z6E"/>
                     </view>
