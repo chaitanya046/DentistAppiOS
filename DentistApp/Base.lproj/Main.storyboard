@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -89,56 +89,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-TL-GR2">
-                                <rect key="frame" x="128" y="74" width="158.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="see-AI-Jby"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-Jg-mqU">
-                                <rect key="frame" x="128" y="144" width="158.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Xgu-k8-1Kl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-k2-PKD">
-                                <rect key="frame" x="128" y="214" width="158.5" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="ddA-Ry-fTA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vT6-3I-BkU">
-                                <rect key="frame" x="185.5" y="284" width="43" height="40"/>
+                                <rect key="frame" x="185.5" y="727" width="43" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="btnSave:" destination="W4h-H0-S0L" eventType="touchUpInside" id="OMW-4Y-vZd"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZFd-H4-1qh">
+                                <rect key="frame" x="50" y="194" width="314" height="419"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BtB-TL-GR2">
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b6f-k2-PKD">
+                                        <rect key="frame" x="0.0" y="173" width="314" height="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2a-Jg-mqU">
+                                        <rect key="frame" x="0.0" y="346" width="314" height="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="3rg-sh-Ubz"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="4xo-dD-xDT"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="66J-iL-nmf"/>
-                            <constraint firstItem="vT6-3I-BkU" firstAttribute="top" secondItem="b6f-k2-PKD" secondAttribute="bottom" constant="30" id="CMg-jB-IUj"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Db2-tg-9Pa"/>
+                            <constraint firstItem="ZFd-H4-1qh" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="150" id="E2b-uD-JfN"/>
                             <constraint firstItem="vT6-3I-BkU" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="Ktm-JH-Tvq"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="OlC-Bz-VMD"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="On5-4U-AsP"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="YxB-0R-GDl"/>
-                            <constraint firstItem="BtB-TL-GR2" firstAttribute="top" secondItem="qg0-1G-Z6E" secondAttribute="top" constant="30" id="bcw-LS-EoH"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="e4k-PH-d9d"/>
-                            <constraint firstItem="b6f-k2-PKD" firstAttribute="top" secondItem="g2a-Jg-mqU" secondAttribute="bottom" constant="30" id="f33-Zr-dBB"/>
-                            <constraint firstItem="vT6-3I-BkU" firstAttribute="height" secondItem="BtB-TL-GR2" secondAttribute="height" id="liL-IW-kat"/>
-                            <constraint firstItem="g2a-Jg-mqU" firstAttribute="width" secondItem="BtB-TL-GR2" secondAttribute="width" id="nAm-iJ-Xa7"/>
-                            <constraint firstItem="BtB-TL-GR2" firstAttribute="centerX" secondItem="7Na-RX-uIW" secondAttribute="centerX" id="xCm-6u-FfW"/>
+                            <constraint firstItem="ZFd-H4-1qh" firstAttribute="leading" secondItem="qg0-1G-Z6E" secondAttribute="leading" constant="50" id="NcM-Pc-coi"/>
+                            <constraint firstItem="ZFd-H4-1qh" firstAttribute="trailing" secondItem="qg0-1G-Z6E" secondAttribute="trailing" constant="-50" id="dq3-5n-b7c"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="vT6-3I-BkU" secondAttribute="bottom" constant="50" id="iuh-di-5az"/>
+                            <constraint firstItem="qg0-1G-Z6E" firstAttribute="bottom" secondItem="ZFd-H4-1qh" secondAttribute="bottom" constant="200" id="u2D-5H-RSz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qg0-1G-Z6E"/>
                     </view>
