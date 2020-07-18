@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		476FDDB124C2CCA300C18C2A /* DoctorListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB024C2CCA300C18C2A /* DoctorListScreen.swift */; };
+		476FDDB324C2CD0D00C18C2A /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB224C2CD0D00C18C2A /* DoctorCell.swift */; };
 		47E5DD422491EA6500C8197B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD412491EA6500C8197B /* AppDelegate.swift */; };
 		47E5DD442491EA6500C8197B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD432491EA6500C8197B /* SceneDelegate.swift */; };
 		47E5DD462491EA6500C8197B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD452491EA6500C8197B /* ViewController.swift */; };
@@ -32,8 +34,6 @@
 		499F85E724BFAD5500336375 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85D724BFAD5500336375 /* IQNSArray+Sort.swift */; };
 		A12F3DFA24944B8C0087F194 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12F3DF924944B8C0087F194 /* MapKit.framework */; };
 		A1E56AD724C287CC0053AC38 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56AD624C287CB0053AC38 /* Doctor.swift */; };
-		A1E56ADC24C28A000053AC38 /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56AD924C28A000053AC38 /* DoctorCell.swift */; };
-		A1E56ADD24C28A000053AC38 /* DoctorListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56ADA24C28A000053AC38 /* DoctorListScreen.swift */; };
 		A1E56AE524C28BD80053AC38 /* DoctorStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E56AE424C28BD80053AC38 /* DoctorStore.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		476FDDB024C2CCA300C18C2A /* DoctorListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListScreen.swift; sourceTree = "<group>"; };
+		476FDDB224C2CD0D00C18C2A /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
 		47E5DD3E2491EA6500C8197B /* DentistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD412491EA6500C8197B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E5DD432491EA6500C8197B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,8 +89,6 @@
 		499F85D724BFAD5500336375 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		A12F3DF924944B8C0087F194 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A1E56AD624C287CB0053AC38 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
-		A1E56AD924C28A000053AC38 /* DoctorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorCell.swift; path = ../../../Downloads/DoctorCell.swift; sourceTree = "<group>"; };
-		A1E56ADA24C28A000053AC38 /* DoctorListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoctorListScreen.swift; path = ../../../Downloads/DoctorListScreen.swift; sourceTree = "<group>"; };
 		A1E56AE424C28BD80053AC38 /* DoctorStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,8 +147,8 @@
 				A1E56AD624C287CB0053AC38 /* Doctor.swift */,
 				47E5DD432491EA6500C8197B /* SceneDelegate.swift */,
 				A1E56AE424C28BD80053AC38 /* DoctorStore.swift */,
-				A1E56AD924C28A000053AC38 /* DoctorCell.swift */,
-				A1E56ADA24C28A000053AC38 /* DoctorListScreen.swift */,
+				476FDDB024C2CCA300C18C2A /* DoctorListScreen.swift */,
+				476FDDB224C2CD0D00C18C2A /* DoctorCell.swift */,
 				47E5DD452491EA6500C8197B /* ViewController.swift */,
 				47E5DD472491EA6500C8197B /* Main.storyboard */,
 				47E5DD4A2491EA6700C8197B /* Assets.xcassets */,
@@ -371,19 +371,19 @@
 			files = (
 				499F85E724BFAD5500336375 /* IQNSArray+Sort.swift in Sources */,
 				499F85E124BFAD5500336375 /* IQKeyboardReturnKeyHandler.swift in Sources */,
-				A1E56ADC24C28A000053AC38 /* DoctorCell.swift in Sources */,
 				499F85DD24BFAD5500336375 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				47E5DD462491EA6500C8197B /* ViewController.swift in Sources */,
 				499F85D924BFAD5500336375 /* IQPreviousNextView.swift in Sources */,
+				476FDDB324C2CD0D00C18C2A /* DoctorCell.swift in Sources */,
 				499F85E624BFAD5500336375 /* IQUIView+Hierarchy.swift in Sources */,
 				A1E56AD724C287CC0053AC38 /* Doctor.swift in Sources */,
+				476FDDB124C2CCA300C18C2A /* DoctorListScreen.swift in Sources */,
 				499F85DF24BFAD5500336375 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				499F85E024BFAD5500336375 /* IQKeyboardManagerConstants.swift in Sources */,
 				499F85E524BFAD5500336375 /* IQUITextFieldView+Additions.swift in Sources */,
 				499F85E424BFAD5500336375 /* IQUIViewController+Additions.swift in Sources */,
 				499F85E224BFAD5500336375 /* IQKeyboardManager.swift in Sources */,
 				499F85DB24BFAD5500336375 /* IQBarButtonItem.swift in Sources */,
-				A1E56ADD24C28A000053AC38 /* DoctorListScreen.swift in Sources */,
 				499F85E324BFAD5500336375 /* IQUIScrollView+Additions.swift in Sources */,
 				499F85D824BFAD5500336375 /* IQTextView.swift in Sources */,
 				499F85DA24BFAD5500336375 /* IQTitleBarButtonItem.swift in Sources */,
