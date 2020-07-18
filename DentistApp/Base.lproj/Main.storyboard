@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -210,11 +210,11 @@
             </objects>
             <point key="canvasLocation" x="-4084" y="-818"/>
         </scene>
-        <!--Item-->
+        <!--Doctors-->
         <scene sceneID="tpp-kz-QxL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MXs-Vp-qkD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WDA-cp-RSF"/>
+                    <tabBarItem key="tabBarItem" title="Doctors" id="WDA-cp-RSF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RX1-lV-AHu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
