@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		476FDDB124C2CCA300C18C2A /* DoctorListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB024C2CCA300C18C2A /* DoctorListScreen.swift */; };
 		476FDDB324C2CD0D00C18C2A /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB224C2CD0D00C18C2A /* DoctorCell.swift */; };
+		476FDDB524C2CF4200C18C2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB424C2CF4200C18C2A /* MapViewController.swift */; };
 		47E5DD422491EA6500C8197B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD412491EA6500C8197B /* AppDelegate.swift */; };
 		47E5DD442491EA6500C8197B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD432491EA6500C8197B /* SceneDelegate.swift */; };
 		47E5DD462491EA6500C8197B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD452491EA6500C8197B /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		476FDDB024C2CCA300C18C2A /* DoctorListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorListScreen.swift; sourceTree = "<group>"; };
 		476FDDB224C2CD0D00C18C2A /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
+		476FDDB424C2CF4200C18C2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		47E5DD3E2491EA6500C8197B /* DentistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD412491EA6500C8197B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47E5DD432491EA6500C8197B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				47E5DD472491EA6500C8197B /* Main.storyboard */,
 				47E5DD4A2491EA6700C8197B /* Assets.xcassets */,
 				47E5DD4F2491EA6700C8197B /* Info.plist */,
+				476FDDB424C2CF4200C18C2A /* MapViewController.swift */,
 			);
 			path = DentistApp;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				499F85D924BFAD5500336375 /* IQPreviousNextView.swift in Sources */,
 				476FDDB324C2CD0D00C18C2A /* DoctorCell.swift in Sources */,
 				499F85E624BFAD5500336375 /* IQUIView+Hierarchy.swift in Sources */,
+				476FDDB524C2CF4200C18C2A /* MapViewController.swift in Sources */,
 				A1E56AD724C287CC0053AC38 /* Doctor.swift in Sources */,
 				476FDDB124C2CCA300C18C2A /* DoctorListScreen.swift in Sources */,
 				499F85DF24BFAD5500336375 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
