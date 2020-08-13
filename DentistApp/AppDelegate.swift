@@ -36,7 +36,35 @@ var window: UIWindow?
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
+extension UIApplication {
+    class var topViewController: UIViewController? { return getTopViewController() }
+    private class func getTopViewController(base: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController { return getTopViewController(base: nav.visibleViewController) }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController { return getTopViewController(base: selected) }
+        }
+        if let presented = base?.presentedViewController { return getTopViewController(base: presented) }
+        return base
+    }
+
+    private class func _share(_ data: [Any],
+                              applicationActivities: [UIActivity]?,
+                              setupViewControllerCompletion: ((UIActivityViewController) -> Void)?) {
+        let activityViewController = UIActivityViewController(activityItems: data, applicationActivities: nil)
+        setupViewControllerCompletion?(activityViewController)
+        UIApplication.topViewController?.present(activityViewController, animated: true, completion: nil)
+    }
+
+    class func share(_ data: Any...,
+                     applicationActivities: [UIActivity]? = nil,
+                     setupViewControllerCompletion: ((UIActivityViewController) -> Void)? = nil) {
+        _share(data, applicationActivities: applicationActivities, setupViewControllerCompletion: setupViewControllerCompletion)
+    }
+    class func share(_ data: [Any],
+                     applicationActivities: [UIActivity]? = nil,
+                     setupViewControllerCompletion: ((UIActivityViewController) -> Void)? = nil) {
+        _share(data, applicationActivities: applicationActivities, setupViewControllerCompletion: setupViewControllerCompletion)
+    }
+}

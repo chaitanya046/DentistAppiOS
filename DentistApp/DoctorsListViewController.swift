@@ -8,36 +8,29 @@
 
 import UIKit
 
-class DoctorsListViewController : UITableViewController{
+class DoctorsListViewController : UIViewController {
+    
     var doctorStore: DoctorStore!
     
+    @IBOutlet weak private var tableView: UITableView!
+    @IBOutlet weak private var collectionView: UICollectionView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
+        //        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        //        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        //        tableView.contentInset = insets
+        //        tableView.scrollIndicatorInsets = insets
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
         let doctorStore = DoctorStore()
         self.doctorStore = doctorStore
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return doctorStore.allDoctors.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DoctorCell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DoctorCell", for: indexPath) as! DoctorCell
-        cell.updateLables()
-        let doctor = doctorStore.allDoctors[indexPath.row]
-        cell.titleLabel.text = "Dr.\(doctor.name)"
-        cell.specialityLabel.text = doctor.speciality
-        //cell.detailTextLabel?.text = "\(doctor.name)"
-        
-        return cell
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+        }
+        tableView.isHidden = false
+        collectionView.isHidden = true
     }
     
     @IBAction func AddNewDoctor(_ sender: UIButton) {
@@ -46,35 +39,27 @@ class DoctorsListViewController : UITableViewController{
             let indexPath = IndexPath(row: index, section: 0)
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
-        
     }
     
     @IBAction func EditBuuton(_ sender: UIButton) {
-        if isEditing {
-            sender.setTitle("Edit", for: .normal)
-            setEditing(false, animated: true)
+        if tableView.isEditing {
+            sender.setTitle(NSLocalizedString("Edit", comment: ""), for: .normal)
+            tableView.setEditing(false, animated: true)
         }else{
-            sender.setTitle("Done", for: .normal)
-            setEditing(true, animated: true)
+            sender.setTitle(NSLocalizedString("Done", comment: ""), for: .normal)
+            tableView.setEditing(true, animated: true)
         }
-        
     }
     
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let doctor = doctorStore.allDoctors[indexPath.row]
-            let title = "Delete \(doctor.name)?"
-            let message = "Are you sure want to delete this Doctor record?"
-            let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ac.addAction(cancelAction)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:
-            {(action)->Void in
-                self.doctorStore.removeDoctor(doctor)
-                self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            })
-            ac.addAction(deleteAction)
-            present(ac,animated: true,completion: nil)
+    @IBAction func layoutButtonAction(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Collection Layout" {
+            sender.setTitle("Table Layout", for: .normal)
+            tableView.isHidden = true
+            collectionView.isHidden = false
+        }else{
+            sender.setTitle("Collection Layout", for: .normal)
+            tableView.isHidden = false
+            collectionView.isHidden = true
         }
     }
     
@@ -100,7 +85,89 @@ class DoctorsListViewController : UITableViewController{
             tableDoctor.speciality = doctor.speciality
         }
         tableView.reloadData()
+    }
+}
+
+extension DoctorsListViewController: UITableViewDataSource, UITableViewDelegate {
         
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return doctorStore.allDoctors.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "DoctorCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DoctorCell", for: indexPath) as! DoctorCell
+        cell.updateLables()
+        let doctor = doctorStore.allDoctors[indexPath.row]
+        cell.titleLabel.text = "Dr.\(doctor.name)"
+        cell.specialityLabel.text = NSLocalizedString(doctor.speciality, comment: "")
+        //cell.detailTextLabel?.text = "\(doctor.name)"
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let doctor = doctorStore.allDoctors[indexPath.row]
+            let title = "Delete \(doctor.name)?"
+            let message = "Are you sure want to delete this Doctor record?"
+            let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ac.addAction(cancelAction)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler:
+            {(action)->Void in
+                self.doctorStore.removeDoctor(doctor)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                self.collectionView.reloadData()
+            })
+            ac.addAction(deleteAction)
+            present(ac,animated: true,completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   contextMenuConfigurationForRowAt indexPath: IndexPath,
+                   point: CGPoint) -> UIContextMenuConfiguration? {
+        
+        let copy = UIAction(title: "Copy") {_ in
+            let doctor = self.doctorStore.allDoctors[indexPath.row]
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = doctor.name
+        }
+        let share = UIAction(title: "Share") {_ in
+            let doctor = self.doctorStore.allDoctors[indexPath.row]
+            let data = ["Doctor Information", doctor.name] as [Any]
+            UIApplication.share(data)
+        }
+        let delete = UIAction(title: "Delete") {_ in
+            let doctor = self.doctorStore.allDoctors[indexPath.row]
+            self.doctorStore.removeDoctor(doctor)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.collectionView.reloadData()
+        }
+        
+        return UIContextMenuConfiguration(identifier: nil,
+                                          previewProvider: nil) { _ in
+                                            UIMenu(title: "Actions", children: [copy, share, delete])
+        }
+    }
+}
+
+extension DoctorsListViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return doctorStore.allDoctors.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DoctorCell", for: indexPath as IndexPath) as! DoctorCollectionViewCell
+        cell.doctor = doctorStore.allDoctors[indexPath.row]
+        cell.backgroundColor = UIColor.cyan
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: UIScreen.main.bounds.width, height: 84)
+    }
 }

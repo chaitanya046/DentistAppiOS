@@ -15,6 +15,8 @@
 		47E5DD4B2491EA6700C8197B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E5DD4A2491EA6700C8197B /* Assets.xcassets */; };
 		47E5DD592491EA6800C8197B /* DentistAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD582491EA6800C8197B /* DentistAppTests.swift */; };
 		47E5DD642491EA6800C8197B /* DentistAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD632491EA6800C8197B /* DentistAppUITests.swift */; };
+		4918BD7024E4C708000D259F /* DoctorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4918BD6F24E4C708000D259F /* DoctorCollectionViewCell.swift */; };
+		4918BD7424E4C75B000D259F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4918BD7624E4C75B000D259F /* Localizable.strings */; };
 		499F85D824BFAD5500336375 /* IQTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85C424BFAD5500336375 /* IQTextView.swift */; };
 		499F85D924BFAD5500336375 /* IQPreviousNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85C624BFAD5500336375 /* IQPreviousNextView.swift */; };
 		499F85DA24BFAD5500336375 /* IQTitleBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85C724BFAD5500336375 /* IQTitleBarButtonItem.swift */; };
@@ -71,6 +73,10 @@
 		47E5DD5F2491EA6800C8197B /* DentistAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DentistAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD632491EA6800C8197B /* DentistAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DentistAppUITests.swift; sourceTree = "<group>"; };
 		47E5DD652491EA6800C8197B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4918BD6F24E4C708000D259F /* DoctorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorCollectionViewCell.swift; sourceTree = "<group>"; };
+		4918BD7124E4C72E000D259F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Main.strings"; sourceTree = "<group>"; };
+		4918BD7524E4C75B000D259F /* fr-CA */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "fr-CA"; path = "fr-CA.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		4918BD7724E4C75E000D259F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		499F85C424BFAD5500336375 /* IQTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTextView.swift; sourceTree = "<group>"; };
 		499F85C624BFAD5500336375 /* IQPreviousNextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQPreviousNextView.swift; sourceTree = "<group>"; };
 		499F85C724BFAD5500336375 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
@@ -146,6 +152,7 @@
 		47E5DD402491EA6500C8197B /* DentistApp */ = {
 			isa = PBXGroup;
 			children = (
+				4918BD6F24E4C708000D259F /* DoctorCollectionViewCell.swift */,
 				499F85C224BFAD5500336375 /* IQKeyboardManagerSwift */,
 				47E5DD412491EA6500C8197B /* AppDelegate.swift */,
 				47E5DD432491EA6500C8197B /* SceneDelegate.swift */,
@@ -159,6 +166,7 @@
 				75E7E5E824DCF8C400553513 /* DoctorsListViewController.swift */,
 				7539F6CD24E032B300780C0D /* DoctorCell.swift */,
 				75E7E5EC24DD078900553513 /* DoctorStore.swift */,
+				4918BD7624E4C75B000D259F /* Localizable.strings */,
 			);
 			path = DentistApp;
 			sourceTree = "<group>";
@@ -331,6 +339,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"fr-CA",
 			);
 			mainGroup = 47E5DD352491EA6500C8197B;
 			productRefGroup = 47E5DD3F2491EA6500C8197B /* Products */;
@@ -350,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E5DD4B2491EA6700C8197B /* Assets.xcassets in Resources */,
+				4918BD7424E4C75B000D259F /* Localizable.strings in Resources */,
 				47E5DD492491EA6500C8197B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +400,7 @@
 				499F85E524BFAD5500336375 /* IQUITextFieldView+Additions.swift in Sources */,
 				499F85E424BFAD5500336375 /* IQUIViewController+Additions.swift in Sources */,
 				499F85E224BFAD5500336375 /* IQKeyboardManager.swift in Sources */,
+				4918BD7024E4C708000D259F /* DoctorCollectionViewCell.swift in Sources */,
 				499F85DB24BFAD5500336375 /* IQBarButtonItem.swift in Sources */,
 				499F85E324BFAD5500336375 /* IQUIScrollView+Additions.swift in Sources */,
 				499F85D824BFAD5500336375 /* IQTextView.swift in Sources */,
@@ -439,8 +450,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				47E5DD482491EA6500C8197B /* Base */,
+				4918BD7124E4C72E000D259F /* fr-CA */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4918BD7624E4C75B000D259F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4918BD7524E4C75B000D259F /* fr-CA */,
+				4918BD7724E4C75E000D259F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -450,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -510,6 +532,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

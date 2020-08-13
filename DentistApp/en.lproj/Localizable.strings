@@ -1,0 +1,13 @@
+/*
+  Localizable.strings
+  DentistApp
+
+  Created by user173218 on 2020-08-11.
+  Copyright © 2020 Chaitanya Uttarwar. All rights reserved.
+*/
+
+"Orthodontist" = "Orthodontist";
+"Immunologist" = "Immunologist";
+"Cardiologists" = "Cardiologists";
+"Done" = "Done";
+"Edit" = "Edit";
