@@ -33,7 +33,13 @@
 		499F85E524BFAD5500336375 /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85D524BFAD5500336375 /* IQUITextFieldView+Additions.swift */; };
 		499F85E624BFAD5500336375 /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85D624BFAD5500336375 /* IQUIView+Hierarchy.swift */; };
 		499F85E724BFAD5500336375 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499F85D724BFAD5500336375 /* IQNSArray+Sort.swift */; };
+		7536271624E6CADB00792519 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7536271524E6CADB00792519 /* CoreLocation.framework */; };
+		7536271824E6CB8000792519 /* AnnotationsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7536271724E6CB8000792519 /* AnnotationsClass.swift */; };
 		7539F6CE24E032B300780C0D /* DoctorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7539F6CD24E032B300780C0D /* DoctorCell.swift */; };
+		7577E00E24E61AC500C8804E /* HospitalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577E00D24E61AC500C8804E /* HospitalViewController.swift */; };
+		7577E01024E61D7900C8804E /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577E00F24E61D7900C8804E /* Hospital.swift */; };
+		7577E01224E61ED900C8804E /* HospitalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577E01124E61ED900C8804E /* HospitalTableViewCell.swift */; };
+		7577E01424E620D400C8804E /* HospitalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577E01324E620D400C8804E /* HospitalStore.swift */; };
 		75BF9D7C24E07544001D6977 /* DoctorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF9D7B24E07544001D6977 /* DoctorDetailsViewController.swift */; };
 		75E7E5E924DCF8C400553513 /* DoctorsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E7E5E824DCF8C400553513 /* DoctorsListViewController.swift */; };
 		75E7E5EB24DD001100553513 /* Doctor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E7E5EA24DD001100553513 /* Doctor.swift */; };
@@ -94,7 +100,13 @@
 		499F85D524BFAD5500336375 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		499F85D624BFAD5500336375 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		499F85D724BFAD5500336375 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
+		7536271524E6CADB00792519 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7536271724E6CB8000792519 /* AnnotationsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationsClass.swift; sourceTree = "<group>"; };
 		7539F6CD24E032B300780C0D /* DoctorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorCell.swift; sourceTree = "<group>"; };
+		7577E00D24E61AC500C8804E /* HospitalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalViewController.swift; sourceTree = "<group>"; };
+		7577E00F24E61D7900C8804E /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		7577E01124E61ED900C8804E /* HospitalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalTableViewCell.swift; sourceTree = "<group>"; };
+		7577E01324E620D400C8804E /* HospitalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HospitalStore.swift; sourceTree = "<group>"; };
 		75BF9D7B24E07544001D6977 /* DoctorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorDetailsViewController.swift; sourceTree = "<group>"; };
 		75E7E5E824DCF8C400553513 /* DoctorsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorsListViewController.swift; sourceTree = "<group>"; };
 		75E7E5EA24DD001100553513 /* Doctor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doctor.swift; sourceTree = "<group>"; };
@@ -107,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7536271624E6CADB00792519 /* CoreLocation.framework in Frameworks */,
 				A12F3DFA24944B8C0087F194 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,12 +165,16 @@
 		47E5DD402491EA6500C8197B /* DentistApp */ = {
 			isa = PBXGroup;
 			children = (
-				4918BD6F24E4C708000D259F /* DoctorCollectionViewCell.swift */,
 				499F85C224BFAD5500336375 /* IQKeyboardManagerSwift */,
 				47E5DD412491EA6500C8197B /* AppDelegate.swift */,
 				47E5DD432491EA6500C8197B /* SceneDelegate.swift */,
 				47E5DD452491EA6500C8197B /* ViewController.swift */,
 				47E5DD472491EA6500C8197B /* Main.storyboard */,
+				7577E01124E61ED900C8804E /* HospitalTableViewCell.swift */,
+				7577E01324E620D400C8804E /* HospitalStore.swift */,
+				7577E00F24E61D7900C8804E /* Hospital.swift */,
+				4918BD6F24E4C708000D259F /* DoctorCollectionViewCell.swift */,
+				7577E00D24E61AC500C8804E /* HospitalViewController.swift */,
 				75BF9D7B24E07544001D6977 /* DoctorDetailsViewController.swift */,
 				47E5DD4A2491EA6700C8197B /* Assets.xcassets */,
 				47E5DD4F2491EA6700C8197B /* Info.plist */,
@@ -165,6 +182,7 @@
 				75E7E5EA24DD001100553513 /* Doctor.swift */,
 				75E7E5E824DCF8C400553513 /* DoctorsListViewController.swift */,
 				7539F6CD24E032B300780C0D /* DoctorCell.swift */,
+				7536271724E6CB8000792519 /* AnnotationsClass.swift */,
 				75E7E5EC24DD078900553513 /* DoctorStore.swift */,
 				4918BD7624E4C75B000D259F /* Localizable.strings */,
 			);
@@ -248,6 +266,7 @@
 		A12F3DF824944B8B0087F194 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7536271524E6CADB00792519 /* CoreLocation.framework */,
 				A12F3DF924944B8C0087F194 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -389,7 +408,9 @@
 				499F85E724BFAD5500336375 /* IQNSArray+Sort.swift in Sources */,
 				499F85E124BFAD5500336375 /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				499F85DD24BFAD5500336375 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				7536271824E6CB8000792519 /* AnnotationsClass.swift in Sources */,
 				75BF9D7C24E07544001D6977 /* DoctorDetailsViewController.swift in Sources */,
+				7577E00E24E61AC500C8804E /* HospitalViewController.swift in Sources */,
 				47E5DD462491EA6500C8197B /* ViewController.swift in Sources */,
 				499F85D924BFAD5500336375 /* IQPreviousNextView.swift in Sources */,
 				7539F6CE24E032B300780C0D /* DoctorCell.swift in Sources */,
@@ -405,8 +426,11 @@
 				499F85E324BFAD5500336375 /* IQUIScrollView+Additions.swift in Sources */,
 				499F85D824BFAD5500336375 /* IQTextView.swift in Sources */,
 				75E7E5E924DCF8C400553513 /* DoctorsListViewController.swift in Sources */,
+				7577E01024E61D7900C8804E /* Hospital.swift in Sources */,
 				499F85DA24BFAD5500336375 /* IQTitleBarButtonItem.swift in Sources */,
+				7577E01424E620D400C8804E /* HospitalStore.swift in Sources */,
 				47E5DD422491EA6500C8197B /* AppDelegate.swift in Sources */,
+				7577E01224E61ED900C8804E /* HospitalTableViewCell.swift in Sources */,
 				47E5DD442491EA6500C8197B /* SceneDelegate.swift in Sources */,
 				75E7E5ED24DD078900553513 /* DoctorStore.swift in Sources */,
 				499F85DC24BFAD5500336375 /* IQToolbar.swift in Sources */,
