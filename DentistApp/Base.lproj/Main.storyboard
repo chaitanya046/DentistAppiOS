@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vfb-jh-JmK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRy-nz-eMc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX0-Ji-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-843" y="-268"/>
+            <point key="canvasLocation" x="-5414" y="-114"/>
         </scene>
         <!--Confirmation Screeen-->
         <scene sceneID="zcd-u6-NoE">
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="368-k2-U0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5767" y="27"/>
+            <point key="canvasLocation" x="-6984" y="-91"/>
         </scene>
         <!--Patient Information-->
         <scene sceneID="317-Bx-LfO">
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tw3-0k-Hgh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7018.8405797101459" y="-744.64285714285711"/>
+            <point key="canvasLocation" x="-6984" y="-1521"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cUf-ws-faM">
@@ -160,6 +160,7 @@
                         <segue destination="W4h-H0-S0L" kind="relationship" relationship="viewControllers" id="jg7-qA-zC2"/>
                         <segue destination="sZH-eX-zVM" kind="relationship" relationship="viewControllers" id="g91-oC-Zvz"/>
                         <segue destination="MXs-Vp-qkD" kind="relationship" relationship="viewControllers" id="Ke5-5B-h7W"/>
+                        <segue destination="vfb-jh-JmK" kind="relationship" relationship="viewControllers" id="GqQ-Te-fxk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vtB-be-I8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -177,21 +178,24 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iDl-QQ-mIm" kind="relationship" relationship="rootViewController" id="HZZ-g8-4mc"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXn-GI-McB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-5697" y="-872"/>
+            <point key="canvasLocation" x="-6984" y="-814"/>
         </scene>
         <!--Doctor Details View Controller-->
         <scene sceneID="cve-mg-8Y3">
             <objects>
                 <viewController id="AWh-gH-HxS" customClass="DoctorDetailsViewController" customModule="DentistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zGh-aN-J0J">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="agz-wD-Aqs">
-                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                                <rect key="frame" x="20" y="88" width="374" height="725"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="OcS-tY-1jM">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -226,7 +230,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8R-Mi-JMJ">
-                                        <rect key="frame" x="0.0" y="84" width="374" height="724"/>
+                                        <rect key="frame" x="0.0" y="84" width="374" height="641"/>
                                         <state key="normal" title="Back to list"/>
                                         <connections>
                                             <action selector="backToDoctorsList:" destination="AWh-gH-HxS" eventType="touchUpInside" id="mzC-tW-ZvB"/>
@@ -257,7 +261,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9M7-ii-jMY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Z2k-6V-aXn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3825" y="-1120"/>
+            <point key="canvasLocation" x="-5414" y="-814"/>
         </scene>
         <!--Hospitals List-->
         <scene sceneID="7DD-cz-X8q">
@@ -322,7 +326,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYJ-RQ-A98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2144.927536231884" y="-219.64285714285714"/>
+            <point key="canvasLocation" x="-6184" y="-91"/>
         </scene>
         <!--Doctors List View Controller-->
         <scene sceneID="9aw-Nj-ln4">
@@ -333,7 +337,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u33-Oy-F34">
-                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="1Ai-eV-vcG">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -406,7 +410,7 @@
                                 </connections>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WOM-jM-Rmd">
-                                <rect key="frame" x="0.0" y="94" width="414" height="84"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="84"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="5cD-7W-BRn"/>
@@ -461,7 +465,7 @@
                                 </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cRe-z9-hzx">
-                                <rect key="frame" x="147.5" y="56" width="119" height="30"/>
+                                <rect key="frame" x="147.5" y="100" width="119" height="30"/>
                                 <state key="normal" title="Collection Layout"/>
                                 <connections>
                                     <action selector="layoutButtonAction:" destination="iDl-QQ-mIm" eventType="touchUpInside" id="qrs-tD-4Hh"/>
@@ -482,6 +486,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jhw-xK-EHV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ndz-yq-Hpw"/>
                     <connections>
                         <outlet property="collectionView" destination="WOM-jM-Rmd" id="RbE-ik-ZyW"/>
                         <outlet property="tableView" destination="u33-Oy-F34" id="NRQ-bL-eAY"/>
@@ -489,12 +494,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSM-h1-ab6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4772.463768115942" y="-1101.5625"/>
+            <point key="canvasLocation" x="-6184" y="-814"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Item-->
         <scene sceneID="A0W-a9-q7O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vfb-jh-JmK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="0I8-0Q-5n5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Psb-0C-8TV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -507,7 +513,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41s-lh-oEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3055.072463768116" y="-219.64285714285714"/>
+            <point key="canvasLocation" x="-6984" y="624"/>
         </scene>
     </scenes>
     <resources>

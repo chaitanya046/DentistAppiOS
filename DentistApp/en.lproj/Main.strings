@@ -1,0 +1,84 @@
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "0I8-0Q-5n5"; */
+"0I8-0Q-5n5.title" = "Item";
+
+/* Class = "UIViewController"; title = "Dentist Locations"; ObjectID = "0vx-0V-IMg"; */
+"0vx-0V-IMg.title" = "Dentist Locations";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "7Ta-Tp-lAJ"; */
+"7Ta-Tp-lAJ.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "BtB-TL-GR2"; */
+"BtB-TL-GR2.placeholder" = "Name";
+
+/* Class = "UILabel"; text = "Speciality"; ObjectID = "E3C-7w-niV"; */
+"E3C-7w-niV.text" = "Speciality";
+
+/* Class = "UIButton"; normalTitle = "Get Hospitals"; ObjectID = "FvA-Jw-WPj"; */
+"FvA-Jw-WPj.normalTitle" = "Get Hospitals";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Ja1-5e-JWR"; */
+"Ja1-5e-JWR.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "M6R-ie-rdr"; */
+"M6R-ie-rdr.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Find Dentistry"; ObjectID = "Ozp-UJ-vme"; */
+"Ozp-UJ-vme.title" = "Find Dentistry";
+
+/* Class = "UILabel"; text = "name"; ObjectID = "TYW-yd-09y"; */
+"TYW-yd-09y.text" = "name";
+
+/* Class = "UITabBarItem"; title = "Confirmation Page"; ObjectID = "VBP-dl-pv1"; */
+"VBP-dl-pv1.title" = "Confirmation Page";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "VVc-3b-Dad"; */
+"VVc-3b-Dad.text" = "Location";
+
+/* Class = "UIViewController"; title = "Patient Information"; ObjectID = "W4h-H0-S0L"; */
+"W4h-H0-S0L.title" = "Patient Information";
+
+/* Class = "UITabBarItem"; title = "Doctors"; ObjectID = "WDA-cp-RSF"; */
+"WDA-cp-RSF.title" = "Doctors";
+
+/* Class = "UILabel"; text = "Choose Date & Time"; ObjectID = "Y3i-wQ-xsJ"; */
+"Y3i-wQ-xsJ.text" = "Choose Date & Time";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ax4-4g-mpF"; */
+"ax4-4g-mpF.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Age"; ObjectID = "b6f-k2-PKD"; */
+"b6f-k2-PKD.placeholder" = "Age";
+
+/* Class = "UIButton"; normalTitle = "Edit"; ObjectID = "biL-AM-XF5"; */
+"biL-AM-XF5.normalTitle" = "Edit";
+
+/* Class = "UIButton"; normalTitle = "Back to list"; ObjectID = "c8R-Mi-JMJ"; */
+"c8R-Mi-JMJ.normalTitle" = "Back to list";
+
+/* Class = "UIButton"; normalTitle = "Collection Layout"; ObjectID = "cRe-z9-hzx"; */
+"cRe-z9-hzx.normalTitle" = "Collection Layout";
+
+/* Class = "UITextField"; placeholder = "Phone Number"; ObjectID = "g2a-Jg-mqU"; */
+"g2a-Jg-mqU.placeholder" = "Phone Number";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "ni8-rr-etD"; */
+"ni8-rr-etD.normalTitle" = "Add";
+
+/* Class = "UINavigationItem"; title = "Hospitals List"; ObjectID = "paQ-Gd-2k8"; */
+"paQ-Gd-2k8.title" = "Hospitals List";
+
+/* Class = "UITabBarItem"; title = "Patient's Info "; ObjectID = "qDe-JH-tsF"; */
+"qDe-JH-tsF.title" = "Patient's Info ";
+
+/* Class = "UIViewController"; title = "Confirmation Screeen"; ObjectID = "sZH-eX-zVM"; */
+"sZH-eX-zVM.title" = "Confirmation Screeen";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "u7o-gz-879"; */
+"u7o-gz-879.text" = "Label";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "vHC-90-fBN"; */
+"vHC-90-fBN.text" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Save"; ObjectID = "vT6-3I-BkU"; */
+"vT6-3I-BkU.normalTitle" = "Save";

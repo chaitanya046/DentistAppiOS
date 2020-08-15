@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4749E58324E7719A00972D70 /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749E58124E7719A00972D70 /* Person+CoreDataClass.swift */; };
+		4749E58424E7719A00972D70 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4749E58224E7719A00972D70 /* Person+CoreDataProperties.swift */; };
+		4749E5C424E77B7F00972D70 /* Patients.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 4749E57824E76FD600972D70 /* Patients.xcdatamodeld */; };
 		476FDDB524C2CF4200C18C2A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476FDDB424C2CF4200C18C2A /* MapViewController.swift */; };
 		47E5DD422491EA6500C8197B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD412491EA6500C8197B /* AppDelegate.swift */; };
 		47E5DD442491EA6500C8197B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E5DD432491EA6500C8197B /* SceneDelegate.swift */; };
@@ -65,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4749E57424E76D1300972D70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		4749E57924E76FD600972D70 /* Patients.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Patients.xcdatamodel; sourceTree = "<group>"; };
+		4749E58124E7719A00972D70 /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4749E58224E7719A00972D70 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		476FDDB424C2CF4200C18C2A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		47E5DD3E2491EA6500C8197B /* DentistApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DentistApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E5DD412491EA6500C8197B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,9 +148,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4749E57F24E770C000972D70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4749E58124E7719A00972D70 /* Person+CoreDataClass.swift */,
+				4749E58224E7719A00972D70 /* Person+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		47E5DD352491EA6500C8197B = {
 			isa = PBXGroup;
 			children = (
+				4749E57F24E770C000972D70 /* Model */,
 				47E5DD402491EA6500C8197B /* DentistApp */,
 				47E5DD572491EA6800C8197B /* DentistAppTests */,
 				47E5DD622491EA6800C8197B /* DentistAppUITests */,
@@ -185,6 +202,7 @@
 				7536271724E6CB8000792519 /* AnnotationsClass.swift */,
 				75E7E5EC24DD078900553513 /* DoctorStore.swift */,
 				4918BD7624E4C75B000D259F /* Localizable.strings */,
+				4749E57824E76FD600972D70 /* Patients.xcdatamodeld */,
 			);
 			path = DentistApp;
 			sourceTree = "<group>";
@@ -377,6 +395,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4749E5C424E77B7F00972D70 /* Patients.xcdatamodeld in Resources */,
 				47E5DD4B2491EA6700C8197B /* Assets.xcassets in Resources */,
 				4918BD7424E4C75B000D259F /* Localizable.strings in Resources */,
 				47E5DD492491EA6500C8197B /* Main.storyboard in Resources */,
@@ -425,7 +444,9 @@
 				499F85DB24BFAD5500336375 /* IQBarButtonItem.swift in Sources */,
 				499F85E324BFAD5500336375 /* IQUIScrollView+Additions.swift in Sources */,
 				499F85D824BFAD5500336375 /* IQTextView.swift in Sources */,
+				4749E58424E7719A00972D70 /* Person+CoreDataProperties.swift in Sources */,
 				75E7E5E924DCF8C400553513 /* DoctorsListViewController.swift in Sources */,
+				4749E58324E7719A00972D70 /* Person+CoreDataClass.swift in Sources */,
 				7577E01024E61D7900C8804E /* Hospital.swift in Sources */,
 				499F85DA24BFAD5500336375 /* IQTitleBarButtonItem.swift in Sources */,
 				7577E01424E620D400C8804E /* HospitalStore.swift in Sources */,
@@ -475,6 +496,7 @@
 			children = (
 				47E5DD482491EA6500C8197B /* Base */,
 				4918BD7124E4C72E000D259F /* fr-CA */,
+				4749E57424E76D1300972D70 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -761,6 +783,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4749E57824E76FD600972D70 /* Patients.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4749E57924E76FD600972D70 /* Patients.xcdatamodel */,
+			);
+			currentVersion = 4749E57924E76FD600972D70 /* Patients.xcdatamodel */;
+			path = Patients.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 47E5DD362491EA6500C8197B /* Project object */;
 }

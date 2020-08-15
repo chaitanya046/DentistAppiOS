@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -67,4 +68,9 @@ extension UIApplication {
                      setupViewControllerCompletion: ((UIActivityViewController) -> Void)? = nil) {
         _share(data, applicationActivities: applicationActivities, setupViewControllerCompletion: setupViewControllerCompletion)
     }
+    
+   
+    
+    
+    
 }
