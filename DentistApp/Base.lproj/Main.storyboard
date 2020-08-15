@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iDl-QQ-mIm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vfb-jh-JmK">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,16 +11,20 @@
         <!--Dentist Locations-->
         <scene sceneID="pl3-eC-GqY">
             <objects>
-                <viewController title="Dentist Locations" id="0vx-0V-IMg" sceneMemberID="viewController">
+                <viewController title="Dentist Locations" id="0vx-0V-IMg" customClass="MapViewController" customModule="DentistApp" customModuleProvider="target" sceneMemberID="viewController">
                     <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="sv5-uW-iQN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </mapView>
                     <tabBarItem key="tabBarItem" title="Find Dentistry" image="globe" catalog="system" id="Ozp-UJ-vme"/>
+                    <navigationItem key="navigationItem" id="UXR-bP-H5c"/>
+                    <connections>
+                        <outlet property="mapView" destination="sv5-uW-iQN" id="WQZ-Jy-TBt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xX0-Ji-sWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-7049" y="-31"/>
+            <point key="canvasLocation" x="-843" y="-268"/>
         </scene>
         <!--Confirmation Screeen-->
         <scene sceneID="zcd-u6-NoE">
@@ -154,7 +158,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="W4h-H0-S0L" kind="relationship" relationship="viewControllers" id="jg7-qA-zC2"/>
-                        <segue destination="0vx-0V-IMg" kind="relationship" relationship="viewControllers" id="4xi-8g-6vC"/>
                         <segue destination="sZH-eX-zVM" kind="relationship" relationship="viewControllers" id="g91-oC-Zvz"/>
                         <segue destination="MXs-Vp-qkD" kind="relationship" relationship="viewControllers" id="Ke5-5B-h7W"/>
                     </connections>
@@ -255,6 +258,71 @@
                 <exit id="Z2k-6V-aXn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-3825" y="-1120"/>
+        </scene>
+        <!--Hospitals List-->
+        <scene sceneID="7DD-cz-X8q">
+            <objects>
+                <tableViewController id="noW-BV-Czl" customClass="HospitalViewController" customModule="DentistApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="04f-eZ-4js">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="2Md-Do-rxK">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FvA-Jw-WPj">
+                                    <rect key="frame" x="253" y="49" width="93" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Get Hospitals"/>
+                                    <connections>
+                                        <action selector="getHospitals:" destination="noW-BV-Czl" eventType="touchUpInside" id="TXO-fG-gpQ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HospitalTableViewCell" id="510-Xh-A97" customClass="HospitalTableViewCell" customModule="DentistApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="156" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="510-Xh-A97" id="JTp-a1-mMr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYW-yd-09y">
+                                            <rect key="frame" x="66" y="11" width="43" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVc-3b-Dad">
+                                            <rect key="frame" x="280" y="11" width="76" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="hospitalLocation" destination="VVc-3b-Dad" id="KFZ-Ub-ybW"/>
+                                    <outlet property="hospitalName" destination="TYW-yd-09y" id="LJk-6Q-Ulk"/>
+                                    <segue destination="0vx-0V-IMg" kind="show" id="0qy-RI-SHO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="noW-BV-Czl" id="SSe-dI-kTg"/>
+                            <outlet property="delegate" destination="noW-BV-Czl" id="vc8-xr-mdL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Hospitals List" id="paQ-Gd-2k8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYJ-RQ-A98" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2144.927536231884" y="-219.64285714285714"/>
         </scene>
         <!--Doctors List View Controller-->
         <scene sceneID="9aw-Nj-ln4">
@@ -422,6 +490,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSM-h1-ab6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4772.463768115942" y="-1101.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A0W-a9-q7O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vfb-jh-JmK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Psb-0C-8TV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="noW-BV-Czl" kind="relationship" relationship="rootViewController" id="nnE-jo-rhG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41s-lh-oEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3055.072463768116" y="-219.64285714285714"/>
         </scene>
     </scenes>
     <resources>
