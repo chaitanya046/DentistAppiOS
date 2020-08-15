@@ -77,14 +77,18 @@ class ViewController: UIViewController {
         tap.cancelsTouchesInView = false; view.addGestureRecognizer(tap)
     }
     func add(){
+        //function to add data into core datas
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "Person2", in: context)
         let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        let name: String = nameEntered.text!
+        let age: String = ageEntered.text!
+        let phone: String = phoneEntered.text!
         
-        newUser.setValue("Foey", forKey: "name")
-        newUser.setValue("34", forKey: "age")
-        newUser.setValue("7845123658", forKey: "phone")
+        newUser.setValue(name, forKey: "name")
+        newUser.setValue(age, forKey: "age")
+        newUser.setValue(phone, forKey: "phone")
         
         do {
             try context.save()
