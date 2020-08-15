@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var datepicker: UIDatePicker!
     
+    @IBOutlet weak var personTab: UITableView!
     //executes when save button is pressed
     @IBAction func btnSave(_ sender: UIButton)
     {
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
             let alert = UIAlertController(title: "Information Saved", message: "Dear, "+name+" Aged: "+age+" you will be soon sent details on: "+phone, preferredStyle: UIAlertController.Style.alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
+            add()
             dismissKey()
         }
     }
@@ -72,6 +75,23 @@ class ViewController: UIViewController {
         //this fnction enables the user to dismiss the keyboard by tapping on the screen anywhere
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self.view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false; view.addGestureRecognizer(tap)
+    }
+    func add(){
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Person2", in: context)
+        let newUser = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newUser.setValue("Foey", forKey: "name")
+        newUser.setValue("34", forKey: "age")
+        newUser.setValue("7845123658", forKey: "phone")
+        
+        do {
+            try context.save()
+        } catch {
+            print("Failed saving")
+}
+        
     }
     
     override func viewDidLoad() {
